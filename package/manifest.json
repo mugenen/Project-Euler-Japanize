@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Project Euler Japanize",
-  "version": "1.1",
+  "version": "1.2",
   "description": "Project Euler の問題を日本語化(http://odz.sakura.ne.jp/projecteuler/index.php?Project%20Euler を挿入)",
   "icons": 
   {
