@@ -1,7 +1,12 @@
 'use strict';
 
 getProblemNumber = () ->
-    document.URL.split('=')[1].replace(/^0+/, '')
+    if document.URL.indexOf('http://projecteuler.net/problem=') == 0
+        document.URL.split('=')[1].replace(/^0+/, '')
+    else if document.URL.indexOf('http://projecteuler.net/index.php?section=problems&id=') == 0
+        document.URL.split('=')[2].replace(/^0+/, '')
+    else
+        return ''
 
 getJapanized = (num) ->
     xhr = $.ajax
