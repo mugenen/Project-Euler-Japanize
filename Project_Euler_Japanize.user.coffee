@@ -1,9 +1,10 @@
 'use strict';
 
 getProblemNumber = () ->
-    if document.URL.indexOf('http://projecteuler.net/problem=') == 0
+    URL = document.URL
+    if URL.indexOf('http://projecteuler.net/problem=') == 0 or URL.indexOf('https://projecteuler.net/problem=') == 0
         document.URL.split('=')[1].replace(/^0+/, '')
-    else if document.URL.indexOf('http://projecteuler.net/index.php?section=problems&id=') == 0
+    else if URL.indexOf('http://projecteuler.net/index.php?section=problems&id=') == 0 or URL.indexOf('https://projecteuler.net/index.php?section=problems&id=') == 0
         document.URL.split('=')[2].replace(/^0+/, '')
     else
         return ''

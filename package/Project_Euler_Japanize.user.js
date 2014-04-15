@@ -3,9 +3,11 @@
   var getJapanized, getProblemName, getProblemNumber, jp, name, num;
 
   getProblemNumber = function() {
-    if (document.URL.indexOf('http://projecteuler.net/problem=') === 0) {
+    var URL;
+    URL = document.URL;
+    if (URL.indexOf('http://projecteuler.net/problem=') === 0 || URL.indexOf('https://projecteuler.net/problem=') === 0) {
       return document.URL.split('=')[1].replace(/^0+/, '');
-    } else if (document.URL.indexOf('http://projecteuler.net/index.php?section=problems&id=') === 0) {
+    } else if (URL.indexOf('http://projecteuler.net/index.php?section=problems&id=') === 0 || URL.indexOf('https://projecteuler.net/index.php?section=problems&id=') === 0) {
       return document.URL.split('=')[2].replace(/^0+/, '');
     } else {
       return '';
